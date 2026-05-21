@@ -1,0 +1,18 @@
+#Utilities
+numpy
+pandas
+
+#face recognition
+#for SVM
+scikit-learn  
+#used to detect faces in images
+dlib-bin
+#used to encode faces into 128-d vectors used for embedding of faces
+git+https://github.com/ageitgey/face_recognition_models.git
+setuptools<70.0.0
+
+supabase
+bcrypt
+segna
+pillow
+streamlit 
