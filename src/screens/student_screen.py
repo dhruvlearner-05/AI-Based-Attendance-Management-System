@@ -1,5 +1,26 @@
 import streamlit as st
+from src.ui.base_layout import style_background_dashboard, style_background_home, style_base_layout
+
+from src.components.header import header_dashboard
+from src.components.footer import footer_dashboard
+from src.database.config import supabase
+from PIL import Image
+import numpy as np
 def student_screen():
-    st.title("Student Screen")
-    st.write("Welcome to the student's dashboard!")
-    # Add more student-specific content here
+    style_background_dashboard()
+    style_base_layout()
+    c1, c2 = st.columns(2, vertical_alignment='center', gap='xxlarge')
+    with c1:
+        header_dashboard()
+    with c2:
+        if st.button("Logout", type='secondary', key='loginbackbtn', shortcut="control+backspace"):
+            st.session_state['is_logged_in'] = False
+            st.rerun()
+
+    st.header("Login Using Face ID",text_alignment="center")
+    st.space()
+    st.space()
+    photo_source = st.camera_input("Position your face in the camera")
+    if photo_source is not None:
+        np.array(Image.open(photo_source))
+    footer_dashboard()
