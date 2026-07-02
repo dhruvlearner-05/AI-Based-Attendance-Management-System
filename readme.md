@@ -3,7 +3,7 @@
 AttendAI is an AI-powered attendance management system built with
 **Streamlit**, **Supabase**, **Facial Recognition**, and **Voice
 Recognition**. The system enables teachers to manage subjects, enroll
-students, register biometric profiles, and mark attendance automatically
+students, register face and voice profiles for AI-powered attendance verification., and mark attendance automatically
 using AI.
 
 > **Live Demo:** https://attendai-app.streamlit.app/ 
