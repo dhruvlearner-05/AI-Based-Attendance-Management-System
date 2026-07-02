@@ -14,7 +14,7 @@ setuptools<70.0.0
 
 supabase
 bcrypt
-segna
+segno
 pillow
 librosa
 resemblyzer

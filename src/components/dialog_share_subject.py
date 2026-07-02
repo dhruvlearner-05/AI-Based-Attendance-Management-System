@@ -1,17 +1,17 @@
 import streamlit as st
 
-import segna
+import segno
 import io
 
 
 @st.dialog("Share Class Link")
 def share_subject_dialog(subject_name, subject_code):
-    app_domain = "attendai-main.streamlit.app"
+    app_domain = "attendai-app.streamlit.app"
     join_url = f"{app_domain}/?join-code={subject_code}"
 
     st.header("Scan to Join")
 
-    qr = segna.make(join_url)
+    qr = segno.make(join_url)
 
     out = io.BytesIO()
 
